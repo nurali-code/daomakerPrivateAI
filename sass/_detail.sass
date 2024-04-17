@@ -1,0 +1,303 @@
+.pl-3, .px-3
+    padding-left: 1rem !important
+
+button, a
+    transition: all ease .3s
+    &:hover
+        opacity: .7
+
+    &:active
+        transform: scale(.98)
+
+.w-50
+    width: 50% !important
+
+.small, small
+    font-size: 80%
+    font-weight: 400
+
+@media (min-width: 700px) and (max-width: 900px)
+    .md\:gap-24
+        gap: 2rem
+
+@media (min-width: 900px)
+    .md\:gap-24
+        gap: 6rem
+
+.text-muted
+    color: #6c757d !important
+    line-height: 100%
+    margin-top: 10px
+
+.w-75
+    width: 75% !important
+
+.align-items-center
+    -ms-flex-align: center !important
+    align-items: center !important
+
+.justify-content-center
+    -ms-flex-pack: center !important
+    justify-content: center !important
+
+.d-flex
+    display: -ms-flexbox !important
+    display: flex !important
+
+.col
+    -ms-flex-preferred-size: 0
+    flex-basis: 0
+    -ms-flex-positive: 1
+    flex-grow: 1
+    max-width: 100%
+
+.buy-token
+    button
+        background-image: url('../img/buy-token.png')
+        width: 200px
+        min-height: 60px
+        color: #7bf5fb
+        padding: 12px 15px
+        font-size: 16px
+        line-height: 22px
+        font-weight: 700
+        border: 0
+        background-size: 100% 100%
+
+    @media screen and ( max-width: 700px )
+        width: 86% !important
+        button
+            font-size: 14px
+            min-height: 50px
+            line-height: 110%
+            margin: 0 !important
+            // padding-left: 0
+            // padding-right: 0
+            &:last-of-type
+                margin-left: .5rem !important
+
+.max-w-md
+    max-width: 38rem
+
+.detail
+    &_card
+        padding: 0 30px
+        background: #13151c
+        border-color: #7bf5fb
+        border-style: solid
+        border-width: 0 1px
+        box-sizing: border-box
+        width: 100%
+        border-radius: 0
+        .allocation
+            display: grid
+            grid-template-columns: auto auto
+            grid-gap: 10px
+            justify-content: space-between
+            &>div
+                display: grid
+                align-items: end
+                &:nth-child(2)
+                    text-align: right
+
+            p
+                font-size: 16px
+                line-height: 19px
+                font-family: rajdhani, sans-serif
+                font-weight: 700 !important
+                color: #fff
+                margin-bottom: 0
+                text-align: left
+
+            h3
+                font-family: rajdhani, sans-serif
+                font-weight: 700
+                font-size: 36px
+                line-height: 40px
+                letter-spacing: .02em
+                color: #fff
+                text-align: left
+                margin: 10px 0 0
+
+            .status-p
+                font-size: 12px
+                font-weight: 400 !important
+                line-height: 18px
+                font-family: adrianna
+                color: #fff
+                margin-top: 20px
+                opacity: .5
+
+            .rts
+                h3
+                    font-size: 20px
+                    line-height: 30px
+                    margin: 0
+                    color: white
+
+        .prog_bar
+            padding: 15px 0 0
+            &_grd
+                display: flex
+                justify-content: space-between
+                margin-top: 0
+                margin-bottom: 8px
+
+            span
+                font-style: normal
+                font-weight: 400
+                font-size: 14px
+                line-height: 14px
+                text-transform: capitalize
+                color: #fff
+
+        span.prog._percent
+            display: flex
+            font-size: 14px
+            color: #fff
+            p
+                font-size: 12px
+                opacity: .5
+                margin-right: 6px
+                margin-bottom: 0
+
+        &_outer
+            position: relative
+            &::before,
+            &::after
+                position: absolute
+                background-image: url('../img/outer_b.png')
+                width: 100%
+                height: 30px
+                content: ""
+                left: 0
+                right: 0
+                margin: auto
+                top: -30px
+                background-repeat: no-repeat
+                background-size: 100% 100%
+
+            &::after
+                bottom: -30px
+                top: auto
+                background-image: url('../img/outer_a.png')
+
+        @media screen and ( max-width: 700px )
+            .allocation
+                margin-top: 10px
+                p
+                    font-size: 14px
+                    line-height: 100%
+                h3
+                    font-size: 26px
+                    line-height: 100%
+                    margin-top: 5px
+
+                .rts
+                    h3
+                        font-size: 16px
+
+            .prog_bar
+                span
+                    font-size: 12px
+                    line-height: 13px
+                &_grd
+                    a
+                        font-size: 12px
+
+                    &.w-50
+                        width: 65% !important
+
+.progressbar
+    padding: 1px 5px
+    width: 100%
+    border: 3px solid #2f2f37
+    position: relative
+    height: 30px
+    border-radius: 4px
+    margin-top: 10px
+    margin-bottom: 10px
+
+#myBar
+    background: #7bf5fb
+    border-radius: 5px
+    height: 21px
+    text-align: center
+
+label
+    color: white
+    display: inline-block
+    margin-bottom: .5rem
+    @media screen and ( max-width: 700px )
+        font-size: 12px
+
+.buy-btnbtc
+    display: flex
+    justify-content: space-between
+    .parti
+        font-style: normal
+        font-weight: 400
+        font-size: 14px
+        line-height: 20px
+        text-transform: capitalize
+        color: #fff
+        text-align: right
+        p
+            font-size: 12px
+            opacity: .5
+            color: #fff
+            margin-right: 6px
+            margin-bottom: 0
+
+.input-custom
+    display: block
+    height: 44px
+    font-style: normal
+    font-weight: 400
+    font-size: 16px
+    letter-spacing: .02em
+    color: #7bf5fb
+    background: #13151c
+    border: 1px solid #7bf5fb
+    border-radius: 2px
+    padding: 12px
+    border-right-style: hidden
+    margin-right: 10px
+    @media screen and ( max-width: 700px )
+        margin-right: 5px
+        font-size: 14px
+        letter-spacing: 0
+
+.tit_le2
+    h3
+        font-style: normal
+        font-weight: 700
+        font-size: 28px
+        line-height: 33px
+        color: #fff
+        margin: 0 0 0 5px
+        letter-spacing: 0
+        display: flex
+        justify-content: space-between
+        span
+            font-style: normal
+            font-weight: 400
+            font-size: 16px
+            line-height: 100%
+            letter-spacing: .02em
+            color: #7bf5fb
+            background: rgba(123, 245, 251, .2)
+            border: 1px solid #7bf5fb
+            border-radius: 2px
+            padding: 12px 12px 11px
+            margin-right: -31px
+            margin-top: 5px
+
+            @media screen and ( max-width: 700px )
+                font-size: 14px
+    
+.header__btn
+    background-color: #49d2fd
+    color: #000
+    border: none
+    padding: 22px 30px

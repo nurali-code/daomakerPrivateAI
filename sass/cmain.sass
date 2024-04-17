@@ -1,0 +1,41 @@
+.ctabs
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    border-bottom: 2px solid #1f29371a
+    &__btn
+        position: relative
+        z-index: 1
+        top: 2px
+        font-size: 20px
+        align-self: flex-end
+        display: inline-block
+        padding-left: 1rem
+        padding-right: 1rem
+        padding-top: .5rem
+        padding-bottom: .5rem
+        border-bottom: 2px solid rgba(0, 0, 0, 0)
+        color: #1f293780
+        &.is__active
+            color: #58cdff
+            border-color: #58cdff
+
+[data-tab]
+    display: none
+    opacity: 0
+    visibility: hidden
+    &.is__active
+        display: block
+        animation: fadeIn .3s ease forwards
+
+@keyframes fadeIn
+    0%
+        opacity: 0
+        visibility: hidden
+
+    100%
+        visibility: visible
+        opacity: 1
+
+@import 'detail'
