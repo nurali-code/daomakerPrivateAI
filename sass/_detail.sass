@@ -16,6 +16,10 @@ button, a
     font-size: 80%
     font-weight: 400
 
+:root
+    --first: #a6adbb
+    --second: #5e646d
+
 @media (min-width: 700px) and (max-width: 900px)
     .md\:gap-24
         gap: 2rem
@@ -53,16 +57,17 @@ button, a
 
 .buy-token
     button
-        background-image: url('../img/buy-token.png')
+        // background-image: url('../img/buy-token.png')
+        // background-size: 100% 100%
         width: 200px
-        min-height: 60px
-        color: #7bf5fb
-        padding: 12px 15px
+        min-height: 55px
+        color: #58cdff
+        padding: 11px 15px
         font-size: 16px
         line-height: 22px
         font-weight: 700
-        border: 0
-        background-size: 100% 100%
+        border: 1px solid #58cdff
+        border-radius: 0.5rem
 
     @media screen and ( max-width: 700px )
         width: 86% !important
@@ -81,31 +86,42 @@ button, a
 
 .detail
     &_card
-        padding: 0 30px
-        background: #13151c
-        border-color: #7bf5fb
+        padding: 30px
+        background: #161b20
         border-style: solid
-        border-width: 0 1px
         box-sizing: border-box
         width: 100%
-        border-radius: 0
+        // border-color: #58cdff
+        // border-width: 0 1px
+        border-radius: 1rem
+
+        --tw-ring-opacity: 1
+        --tw-ring-color: var(--fallback-b3, oklch(var(--b3)/var(--tw-ring-opacity)))
+        --tw-shadow: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -4px rgba(0,0,0,.1)
+        --tw-ring-offset-width: 0px
+        --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)
+        --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color)
+        box-shadow: var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)
+
+        color: var(--second)
+
         .allocation
             display: grid
             grid-template-columns: auto auto
             grid-gap: 10px
             justify-content: space-between
+            align-items: center
             &>div
-                display: grid
-                align-items: end
+                // display: grid
+                // align-items: end
                 &:nth-child(2)
                     text-align: right
 
             p
                 font-size: 16px
                 line-height: 19px
-                font-family: rajdhani, sans-serif
                 font-weight: 700 !important
-                color: #fff
+                // color: var(--first)
                 margin-bottom: 0
                 text-align: left
 
@@ -115,25 +131,23 @@ button, a
                 font-size: 36px
                 line-height: 40px
                 letter-spacing: .02em
-                color: #fff
+                color: var(--first)
+                color: rgba(255, 255, 255, .8)
                 text-align: left
-                margin: 10px 0 0
+                margin: 5px 0 0
 
             .status-p
                 font-size: 12px
                 font-weight: 400 !important
                 line-height: 18px
-                font-family: adrianna
-                color: #fff
-                margin-top: 20px
-                opacity: .5
+                // margin-top: 20px
 
             .rts
                 h3
                     font-size: 20px
                     line-height: 30px
                     margin: 0
-                    color: white
+                    color: var(--first)
 
         .prog_bar
             padding: 15px 0 0
@@ -141,7 +155,7 @@ button, a
                 display: flex
                 justify-content: space-between
                 margin-top: 0
-                margin-bottom: 8px
+                margin-bottom: 14px
 
             span
                 font-style: normal
@@ -149,12 +163,13 @@ button, a
                 font-size: 14px
                 line-height: 14px
                 text-transform: capitalize
-                color: #fff
+                color: var(--first)
 
         span.prog._percent
             display: flex
             font-size: 14px
-            color: #fff
+            color: var(--first)
+
             p
                 font-size: 12px
                 opacity: .5
@@ -162,25 +177,26 @@ button, a
                 margin-bottom: 0
 
         &_outer
-            position: relative
-            &::before,
-            &::after
-                position: absolute
-                background-image: url('../img/outer_b.png')
-                width: 100%
-                height: 30px
-                content: ""
-                left: 0
-                right: 0
-                margin: auto
-                top: -30px
-                background-repeat: no-repeat
-                background-size: 100% 100%
 
-            &::after
-                bottom: -30px
-                top: auto
-                background-image: url('../img/outer_a.png')
+            position: relative
+            // &::before,
+            // &::after
+            //     position: absolute
+            //     background-image: url('../img/outer_b.png')
+            //     width: 100%
+            //     height: 30px
+            //     content: ""
+            //     left: 0
+            //     right: 0
+            //     margin: auto
+            //     top: -30px
+            //     background-repeat: no-repeat
+            //     background-size: 100% 100%
+
+            // &::after
+            //     bottom: -30px
+            //     top: auto
+            //     background-image: url('../img/outer_a.png')
 
         @media screen and ( max-width: 700px )
             .allocation
@@ -209,23 +225,24 @@ button, a
                         width: 65% !important
 
 .progressbar
-    padding: 1px 5px
+    padding: 1px
     width: 100%
     border: 3px solid #2f2f37
     position: relative
     height: 30px
-    border-radius: 4px
+    border-radius: 50px
     margin-top: 10px
     margin-bottom: 10px
 
 #myBar
-    background: #7bf5fb
-    border-radius: 5px
+    background: #58cdff
+    border-radius: 50px
     height: 21px
     text-align: center
 
 label
-    color: white
+    font-size: 14px
+    color: var(--first)
     display: inline-block
     margin-bottom: .5rem
     @media screen and ( max-width: 700px )
@@ -240,12 +257,12 @@ label
         font-size: 14px
         line-height: 20px
         text-transform: capitalize
-        color: #fff
+        color: var(--first)
         text-align: right
         p
             font-size: 12px
             opacity: .5
-            color: #fff
+            color: var(--first)
             margin-right: 6px
             margin-bottom: 0
 
@@ -253,16 +270,20 @@ label
     display: block
     height: 44px
     font-style: normal
-    font-weight: 400
+    font-weight: 300
     font-size: 16px
     letter-spacing: .02em
-    color: #7bf5fb
+    color: #58cdff
     background: #13151c
-    border: 1px solid #7bf5fb
+    border: 1px solid #58cdff
+    border: 1px solid rgba(255, 255, 255, .2)
     border-radius: 2px
-    padding: 12px
+    padding: 0 15px
     border-right-style: hidden
     margin-right: 10px
+
+    border-radius: 50px
+
     @media screen and ( max-width: 700px )
         margin-right: 5px
         font-size: 14px
@@ -285,17 +306,19 @@ label
             font-size: 16px
             line-height: 100%
             letter-spacing: .02em
-            color: #7bf5fb
-            background: rgba(123, 245, 251, .2)
-            border: 1px solid #7bf5fb
+            color: #58cdff
+            background: rgba(123, 245, 251, .08)
+            border: 1px solid #58cdff
+            border-right: none
             border-radius: 2px
             padding: 12px 12px 11px
             margin-right: -31px
             margin-top: 5px
+            border-radius: 50px 0 0 50px
 
             @media screen and ( max-width: 700px )
                 font-size: 14px
-    
+
 .header__btn
     background-color: #49d2fd
     color: #000
