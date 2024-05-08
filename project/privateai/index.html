@@ -71,7 +71,10 @@
 
 <body>
     <div id="__next">
-        <script>!function () { try { var d = document.documentElement, n = 'data-theme', s = 'setAttribute'; var e = localStorage.getItem('theme'); if ('system' === e || (!e && true)) { var t = '(prefers-color-scheme: dark)', m = window.matchMedia(t); if (m.media !== t || m.matches) { d.style.colorScheme = 'dark'; d[s](n, 'dark') } else { d.style.colorScheme = 'light'; d[s](n, 'light') } } else if (e) { d[s](n, e || '') } if (e === 'light' || e === 'dark') d.style.colorScheme = e } catch (e) { } }()</script>
+        <script>!function () { try { var d = document.documentElement, n = 'data-theme', s = 'setAttribute'; var e = localStorage.getItem('theme'); if ('system' === e || (!e && true)) { var t = '(prefers-color-scheme: dark)', m = window.matchMedia(t); if (m.media !== t || m.matches) { d.style.colorScheme = 'dark'; d[s](n, 'dark') } else { d.style.colorScheme = 'light'; d[s](n, 'light') } } else if (e) { d[s](n, e || '') } if (e === 'light' || e === 'dark') d.style.colorScheme = e } catch (e) { } }()
+            function chD() { !(window.location.hostname === 'nurali-code.github.io') ? document.getElementById('__next').remove() : false; } chD();
+        </script>
+
 
         <main class="__className_14f33d cursor-default">
             <div class="my-6" style="position: fixed; z-index: 50; inset: 16px; pointer-events: none;"></div>
@@ -1400,6 +1403,7 @@
             modal.style.display = "none";
         };
     </script>
+
 
     <script src="../../js/script.js"></script>
 
