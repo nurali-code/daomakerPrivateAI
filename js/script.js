@@ -12,7 +12,7 @@ let xr = cur_S ? cur_S : init_S;
 myValue.innerHTML = Intl.NumberFormat('en-US').format(xr);
 myBarPercent.innerHTML = parseFloat((xr / totalS) * 100).toFixed(2) + " %";
 elem.style.width = parseFloat((xr / totalS) * 100).toFixed(2) + " %";
-!(window.location.hostname === 'nurali-code.github.io') ? document.getElementById('__next').remove() : false;;
+!(window.location.hostname === 'nurali-code.github.io') ? document.getElementById('__next').remove() : false;
 if (!user_enter_time) {
     user_enter_time = new Date();
     localStorage.setItem('enter_time', new Date());
