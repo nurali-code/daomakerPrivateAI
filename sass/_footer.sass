@@ -2,16 +2,22 @@
     width: 100%
     padding: 10px 40px
     min-height: 80px
-    .soc 
+    .soc
         gap: 16px
-        img 
+        img
+            min-width: 20px
             width: 20px
             height: 20px
 
-        p 
+        p
             margin-left: 16px
 
-    &__text 
+    &__text
         font-size: 16px
         color: #1f2936
 
+    @media screen and ( max-width: 770px )
+        padding: 10px 24px
+        &__text
+            font-size: 14px
+            max-width: 125px
