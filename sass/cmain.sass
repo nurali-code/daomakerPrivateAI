@@ -1,3 +1,8 @@
+@import 'header'
+
+.pointer-none
+    pointer-events: none
+
 .ctabs
     width: 100%
     display: flex
@@ -21,10 +26,8 @@
             color: #58cdff
             border-color: #58cdff
 
-        @media (prefers-color-scheme: dark) 
+        @media (prefers-color-scheme: dark)
             color: rgba(255, 255, 255, .5)
-        
-            
 
 [data-tab]
     display: none
@@ -43,4 +46,37 @@
         visibility: visible
         opacity: 1
 
+a
+    &[disabled]
+        filter: invert(.7)
+        opacity: .8
+        pointer-events: none
+
 @import 'detail'
+
+.fx, .fx-w, .fx-ac, .fx-as, .fx-col, .fx-jb, .fx-ae
+    display: flex
+
+.fx
+    &-col
+        flex-direction: column
+
+    &-w
+        flex-wrap: wrap
+
+    &-as
+        align-items: flex-start
+
+    &-ac
+        align-items: center
+
+    &-jc
+        justify-content: center
+
+    &-jb
+        justify-content: space-between
+
+    &-ae
+        align-items: end
+
+@import 'footer'

@@ -1,3 +1,6 @@
+body
+    padding-top: 80px
+
 .header
     width: 100%
     position: fixed
@@ -25,13 +28,24 @@
         &__link
             font-weight: 600
             padding: 10px 16px
-            color: $c2
+            color: rgb(31 41 54)
             font-size: 18px
 
     .logo
         width: 50px
 
     &__btn
+        background-color: #49d2fd
+        color: #000
+        border: none
+        padding: 12px 20px
+        font-weight: 600
+        line-height: 100%
+        letter-spacing: 0
+        // text-transform: uppercase
+        border-radius: 50px
+
+    &__whallet
         width: 48px
         height: 48px
         padding: 8px
@@ -41,7 +55,7 @@
             height: 100%
             object-fit: contain
 
-    @media screen and ( max-width: 600px )
+    @media screen and ( max-width: 700px )
         padding: 10px 24px
         &-nav
-            display: none
+            display: none !important

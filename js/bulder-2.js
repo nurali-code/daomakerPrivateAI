@@ -6,57 +6,53 @@ function innerBlock(data) {
     document.getElementById('projTitle').innerHTML = data.title;
     document.getElementById('projIcon').setAttribute('src', data.icon)
     document.getElementById('projTitle').innerHTML = data.title;
-    // document.getElementById('cur_price').innerHTML = data.cur_price;
-    // document.getElementById('total').innerHTML = data.total;
 
-    let socialMedia = '';
+    document.getElementById('cur_1').innerHTML = data.cur_1;
+    document.getElementById('cur_price').innerHTML = data.cur_price;
+    document.getElementById('total').innerHTML = data.total;
+
     let statusBlocks = '';
-
     if (data.live === 'on') {
-        statusBlocks += `
-        <div class="badge badge-neutral badge-lg py-4 font-bold bg-blue">Live</div>`;
-    }
-
+        statusBlocks += `<div class="badge badge-neutral badge-lg py-4 font-bold bg-blue">Live</div>`;
+    } else { statusBlocks += `<div></div>` }
     if (data.refundable === 'on') {
-        statusBlocks += `
-        <div class="flex flex-col items-end justify-end gap-3 sm:flex-row">
+        statusBlocks += `<div class="flex flex-col items-end justify-end gap-3 sm:flex-row">
             <div class="badge badge-neutral badge-lg py-4 font-bold">Refundable</div>
         </div>`;
     }
     document.getElementById('statusBlocks').innerHTML = statusBlocks;
 
+    let socialMedia, socialMedia_2, isDisabled;
+    isDisabled = data.website === 'off';
+    socialMedia = `<a class="cursor-pointer" href="${isDisabled ? window.location.href : data.website}" target="_blank" rel="noopener" ${isDisabled ? 'disabled' : ''}> <img src="../../img/www.svg" alt="i"></a>`;
+    isDisabled = data.coingecko === 'off';
+    socialMedia += `<a target="_blank" href="${isDisabled ? '#' : data.coingecko}" ${isDisabled ? 'disabled' : ''} class="cursor-pointer"><img alt="i" src="../../img/coingecko.svg"></a>`;
+    isDisabled = data.twitter === 'off';
+    socialMedia += `<a target="_blank" href="${isDisabled ? '#' : data.twitter}" ${isDisabled ? 'disabled' : ''} class="cursor-pointer"><img alt="i" src="../../img/x.svg"></a>`;
+    isDisabled = data.telegram === 'off';
+    socialMedia += `<a target="_blank" href="${isDisabled ? '#' : data.telegram}" ${isDisabled ? 'disabled' : ''} class="cursor-pointer"><img alt="I" src="../../img/tg-3.svg"></a>`;
+    isDisabled = data.discord === 'off';
+    socialMedia += `<a target="_blank" href="${isDisabled ? '#' : data.discord}" ${isDisabled ? 'disabled' : ''} class="cursor-pointer"><img alt="i" src="../../img/dis.svg"></a>`;
+    isDisabled = data.medium === 'off';
+    socialMedia += `<a target="_blank" href="${isDisabled ? '#' : data.medium}" ${isDisabled ? 'disabled' : ''} class="cursor-pointer"><img alt="i" src="../../img/m.svg"></a>`;
 
-
-
-    // if (data.upcoming === 'on') {
-    //     statusBlocks += `
-    //     <div class="style_container__5HuBA">
-    //         <div class="style_upcoming__eLJiw">upcoming</div>
-    //     </div>`;
-    // }
-
-    return `
-    
-    `;
+    document.getElementById('socialMedia').innerHTML = socialMedia;
+    isDisabled = data.github === 'off';
+    socialMedia_2 = `<a class="cursor-pointer" href="${isDisabled ? '#' : data.github}" target="_blank" rel="noopener" ${isDisabled ? 'disabled' : ''}> <img src="../../img/git.svg" alt="i"></a>`;
+    isDisabled = data.linkin === 'off';
+    socialMedia_2 += `<a class="cursor-pointer" href="${isDisabled ? '#' : data.linkin}" target="_blank" rel="noopener" ${isDisabled ? 'disabled' : ''}> <img src="../../img/in.svg" alt="i"></a>`;
+    isDisabled = data.youtube === 'off';
+    socialMedia_2 += `<a class="cursor-pointer" href="${isDisabled ? '#' : data.youtube}" target="_blank" rel="noopener" ${isDisabled ? 'disabled' : ''}> <img src="../../img/yt.svg" alt="i"></a>`;
+    isDisabled = data.instagram === 'off';
+    socialMedia_2 += `<a class="cursor-pointer" href="${isDisabled ? '#' : data.instagram}" target="_blank" rel="noopener" ${isDisabled ? 'disabled' : ''}> <img src="../../img/inst.svg" alt="i"></a>`;
+    isDisabled = data.redit === 'off';
+    socialMedia_2 += `<a class="cursor-pointer" href="${isDisabled ? '#' : data.redit}" target="_blank" rel="noopener" ${isDisabled ? 'disabled' : ''}> <img src="../../img/redit.svg" alt="i"></a>`;
+    document.getElementById('socialMedia_2').innerHTML = socialMedia_2;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const parts = window.location.href.split('/');
-    const dataLink = parts.filter(Boolean).pop();
-    const indX = data.findIndex(item => item.folder === dataLink);
-    console.log(indX);
-    console.log(
-        data[indX].title
-    );
-
-
-    // const container = document.getElementById('innerBlock');
-    // container.innerHTML = '';
-    const blockHtml = innerBlock(data[indX]);
-    // container.insertAdjacentHTML('beforeend', blockHtml);
-
-    // const tokenBlcok = document.getElementById('tokenInformation');
-    // tokenBlcok.innerHTML = '';
-    // const blockHtml2 = tokenInformation(data[indX]);
-    // tokenBlcok.insertAdjacentHTML('beforeend', blockHtml2);
+    let url = window.location.href;
+    const dataLink = url.replace(/\/[^\/]*\.html$/, '/').split('/').filter(Boolean).pop();
+    const indX = data.findIndex(item => item.link === dataLink);
+    innerBlock(data[indX]);
 });

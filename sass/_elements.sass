@@ -26,11 +26,20 @@ body
 html
     scroll-behavior: smooth
 
+body
+    min-height: 100vh
+    color: $text
+
+    &.active
+        overflow: hidden
+
 .container
-    max-width: 1248px
+    max-width: 1280px
     width: 100%
-    padding: 0 24px
+    padding: 0 40px
     margin: 0 auto
+    @media screen and ( max-width: 600px )
+        padding: 0 24px
 
 .h2
     font-weight: 900
@@ -40,14 +49,6 @@ html
 
 section
     padding: 48px 0
-
-body
-    min-height: 100vh
-    color: $text
-    padding-top: 80px
-
-    &.active
-        overflow: hidden
 
 .fx, .fx-w, .fx-ac, .fx-as, .fx-col, .fx-jb, .fx-ae
     display: flex
@@ -82,6 +83,20 @@ img
 
 .img
     margin: 100px auto
+
+.persent
+    color: #00a96e
+    line-height: 1rem
+    margin-left: 4px
+
+.badge
+    padding: 0 9px
+    background-color: #58cdff !important
+    color: $text
+    border-radius: 20px
+    font-size: 14px
+    display: inline-block
+    margin: 0 0 0 8px
 
 a,
 button
