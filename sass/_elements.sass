@@ -9,12 +9,20 @@
     --bg: #fff
     --c1: #1f2936
     --c2: rgb(31 41 54)
+    --h2: #606872
 
 $bg: var(--bg)
 $c1: var(--c1)
 $c2: var(--c2)
+$h2: var(--h2)
 $main: #97D666
 $text: #343434
+
+@media (prefers-color-scheme: dark)
+    :root
+        --h2: #7d8490
+        --bg: #1d232a
+        --c1: #a6adba
 
 html,
 body
@@ -45,7 +53,7 @@ body
     font-weight: 900
     font-size: 30px
     margin: 0 0 64px
-    color: #606872
+    color: $h2
 
 section
     padding: 48px 0

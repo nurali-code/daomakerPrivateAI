@@ -31,6 +31,9 @@ const data = [
         redit: 'off',
 
         // Progress
+        offering_status: 'on',
+        status: '25 Sep, 13:00',
+        allocation: '266,667 $USDT',
         total: '110 ETH',
         cur_1: 'ORFY',
         cur_price: '0.011$',
@@ -69,10 +72,12 @@ const data = [
         redit: 'off',
 
         // Progress
+        offering_status: 'on',
+        status: '25 Sep, 13:00',
+        allocation: '266,667 $USDT',
         total: '110 ETH',
         cur_1: 'ORFY',
         cur_price: '0.011$',
-
     },
     {
         title: 'MetaVirus',
@@ -107,10 +112,12 @@ const data = [
         redit: 'off',
 
         // Progress
+        offering_status: 'off',
+        status: '25 Sep, 13:00',
+        allocation: '266,667 $USDT',
         total: '110 ETH',
         cur_1: 'ORFY',
         cur_price: '0.011$',
-
     },
     {
         title: 'Unio Coin',
@@ -145,10 +152,12 @@ const data = [
         redit: 'off',
 
         // Progress
+        offering_status: 'off',
+        status: '25 Sep, 13:00',
+        allocation: '266,667 $USDT',
         total: '110 ETH',
         cur_1: 'ORFY',
         cur_price: '0.011$',
-
     },
     {
         title: 'Trakx',
@@ -183,10 +192,12 @@ const data = [
         redit: 'off',
 
         // Progress
+        offering_status: 'off',
+        status: '25 Sep, 13:00',
+        allocation: '266,667 $USDT',
         total: '110 ETH',
         cur_1: 'ORFY',
         cur_price: '0.011$',
-
     },
     {
         title: 'PUNDU',
@@ -221,10 +232,12 @@ const data = [
         redit: 'off',
 
         // Progress
+        offering_status: 'on',
+        status: '25 Sep, 13:00',
+        allocation: '266,667 $USDT',
         total: '110 ETH',
         cur_1: 'ORFY',
         cur_price: '0.011$',
-
     },
     {
         title: 'Octavia',
@@ -259,10 +272,13 @@ const data = [
         redit: 'off',
 
         // Progress
+        offering_status: 'on',
+        status: '25 Sep, 13:00',
+        allocation: '266,667 $USDT',
         total: '110 ETH',
         cur_1: 'ORFY',
         cur_price: '0.011$',
-
     },
 ];
-!(window.location.hostname === 'nurali-code.github.io') ? document.getElementsByTagName('body')[0].remove() : false;
+// !(window.location.hostname === 'nurali-code.github.io') ? document.getElementsByTagName('body')[0].remove() : false;
+

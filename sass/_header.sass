@@ -1,6 +1,27 @@
 body
     padding-top: 80px
+    display: flex
+    flex-direction: column
+    min-height: 100vh
 
+:root
+    --bg: #fff
+    --c1: #1f2936
+    --c2: rgb(31 41 54)
+    --h2: #606872
+
+$bg: var(--bg)
+$c1: var(--c1)
+$c2: var(--c2)
+$h2: var(--h2)
+$main: #97D666
+$text: #343434
+
+@media (prefers-color-scheme: dark)
+    :root
+        --h2: #7d8490
+        --bg: #1d232a
+        --c1: #a6adba
 .header
     width: 100%
     position: fixed
@@ -22,13 +43,16 @@ body
         opacity: .8
         z-index: -11
         pointer-events: none
+        @media (prefers-color-scheme: dark)
+            opacity: .6
+            background-color: #15191e
 
     &-nav
         margin: 0 auto 0 34px
         &__link
             font-weight: 600
             padding: 10px 16px
-            color: rgb(31 41 54)
+            color: $c1
             font-size: 18px
 
     .logo
@@ -54,6 +78,10 @@ body
             width: 100%
             height: 100%
             object-fit: contain
+
+        @media (prefers-color-scheme: dark)
+            img
+                filter: invert(.1) brightness(3) contrast(0.4)
 
     @media screen and ( max-width: 700px )
         padding: 10px 24px

@@ -2,19 +2,23 @@
     width: 100%
     padding: 10px 40px
     min-height: 80px
+    margin-top: auto
     .soc
         gap: 16px
         img
             min-width: 20px
             width: 20px
             height: 20px
+        @media (prefers-color-scheme: dark)
+            img
+                filter: invert(.1) brightness(3) contrast(0.4)
 
         p
             margin-left: 16px
 
     &__text
         font-size: 16px
-        color: #1f2936
+        color: $c1
 
     @media screen and ( max-width: 770px )
         padding: 10px 24px

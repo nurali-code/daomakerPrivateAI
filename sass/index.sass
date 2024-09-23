@@ -34,8 +34,9 @@
         height: 128px
 
     .h1
+        font-family: ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji
         font-size: 72px
-        font-weight: 900
+        font-weight: 700
         line-height: 120%
         margin: 0
 
@@ -162,9 +163,12 @@
             &:first-child
                 width: 50%
 
+            @media (prefers-color-scheme: dark)
+                border-color: #191e24
+
     tbody
         td
-            color: #1f2936
+            color: $c1
             img
                 width: 32px
 
@@ -181,7 +185,7 @@
                     object-fit: contain
 
             a
-                color: #1f2936
+                color: $c1
                 gap: 16px
                 opacity: 1 !important
                 &:not(.fx-ac)
@@ -195,6 +199,10 @@
         &:nth-child(even)
             td
                 background-color: #f8f8f8
+
+            @media (prefers-color-scheme: dark)
+                td
+                    background-color: #1b2027
 
     @media screen and ( max-width: 770px )
         td, th
@@ -218,10 +226,10 @@
         padding: 64px
         font-size: 12px
         text-align: center
-        color: #1f2936
+        color: $c1
         a
-            color: #1f2936
-            border-bottom: 1px solid #1f2936
+            color: $c1
+            border-bottom: 1px solid $c1
 
 @keyframes blink
     0%
