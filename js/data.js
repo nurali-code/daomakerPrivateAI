@@ -152,7 +152,7 @@ const data = [
         redit: 'off',
 
         // Progress
-        offering_status: 'off',
+        offering_status: 'on',
         status: '25 Sep, 13:00',
         allocation: '266,667 $USDT',
         total: '110 ETH',
