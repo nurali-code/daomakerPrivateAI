@@ -70,6 +70,7 @@ function innerBlock(data) {
 
     if (data.offering_status === 'on') {
         document.getElementById('cur_1').innerHTML = data.cur_1;
+        document.getElementById('cur_2').innerHTML = data.cur_1;
         document.getElementById('cur_price').innerHTML = data.cur_price;
         document.getElementById('total').innerHTML = data.total;
         document.getElementById('statusOffering').innerHTML = `
