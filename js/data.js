@@ -73,7 +73,7 @@ const data = [
 
         // Progress
         offering_status: 'on',
-        status: '25 Sep, 13:00',
+        status: '03 October, 10:00',
         allocation: '266,667 $USDT',
         total: '110 ETH',
         cur_1: 'ORFY',
