@@ -130,24 +130,31 @@
             <div class="relative flex h-full px-6 sm:px-10 is__active"  data-tab="2">
                 <div id="offering_on" 
                     class="relative hidden mx-auto mt-4 flex flex-col justify-center gap-12 py-6 max-md:items-center md:mt-8 md:flex-row md:gap-24">
-                    <div class="w-full md:w-fit">
+                    <div class="w-full md:w-fit tracking-wide">
                         <div class="flex flex-col gap-6 whitespace-nowrap md:mt-2 md:grid-cols-none">
-                            <div class="flex flex-col gap-6" id="statusOffering"> </div>
                             <div class="flex flex-col border-r border-base-content/10 px-4 py-1 md:pl-0">
-                                <div class="flex h-8 items-center justify-end text-lg font-medium tracking-wide">
-                                    Deposits</div>
+                                <span class="h-8 text-end text-lg font-medium">Open</span>
+                                <div class="flex gap-1 h-8 items-center justify-end text-lg text-base-content/50">
+                                    <!-- <span class="days"></span> d: -->
+                                    <span class="ht_h"></span> h:
+                                    <span class="ht_m"></span> m:
+                                    <span class="ht_s"></span> s
+                                </div>
+                            </div>
+                            <div
+                                class="flex flex-col border-l border-base-content/10 px-4 py-1 md:border-l-0 md:border-r md:pl-0">
+                                <div class="h-8 text-end text-lg font-medium">Total allocation</div>
+                                <div class="flex h-8 items-center justify-start text-lg text-base-content/50 md:justify-end"
+                                    id="statusOffering"></div>
+                            </div>
+                            <div class="flex flex-col border-r border-base-content/10 px-4 py-1 md:pl-0">
+                                <div class="h-8 text-end text-lg font-medium">Deposits</div>
                                 <div class="flex h-8 items-center justify-end text-lg text-base-content/50">
-                                    16,031,904 $USDT</div>
+                                    131,904 $USDT</div>
                                 <div class="flex h-8 items-center justify-end text-base-content/50">
                                     60.1x subscribed</div>
                                 <div class="flex h-4 items-center justify-end text-base-content/50">
                                     3750 deposits</div>
-                                <div class="flex h-8 items-center justify-end text-base-content/50">
-                                    <a class="cursor-pointer select-none underline underline-offset-2 hover:text-base-content/80"
-                                        target="_blank" rel="noopener"
-                                        href="https://bscscan.com/address/0x3aef0a1b785f9995f5c1bc42a196608f73c1293d">deposit
-                                        contract</a>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -177,7 +184,7 @@
                                         <div class="rts" id="clockdiv">
                                             <p class="status-p">End in</p>
                                             <div class="timer_desktop">
-                                                <h3 id="poolonpagestart">
+                                                <h3>
                                                     <span class="days"></span> d:
                                                     <span class="ht_h"></span> h:
                                                     <span class="ht_m"></span> m:

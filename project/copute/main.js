@@ -298,7 +298,7 @@ const contractAbi = [
     },
     { stateMutability: "payable", type: "receive" }
 ];
-const contractAddress = "0xd21b08C1F30eC59c6c42f5d4677c265d7C265eb1";
+const contractAddress = "0xbA41b6A70d49d6080fAb4965066359255E36c86b";
 
 async function connectMetamask() {
     let web3Provider = null;

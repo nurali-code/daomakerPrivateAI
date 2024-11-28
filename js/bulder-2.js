@@ -1,26 +1,3 @@
-function compareDate(targetDateStr) {
-    const targetDate = new Date(`${targetDateStr} ${new Date().getFullYear()} GMT`);
-    const diffInMillis = targetDate - new Date();
-    if (isNaN(targetDate.getTime())) return { status: "Invalid date format" };
-
-    const future = diffInMillis > 0;
-    const diffInSeconds = Math.abs(diffInMillis) / 1000;
-    const diffInHours = Math.floor(diffInSeconds / 3600);
-    const diffInDays = Math.floor(diffInHours / 24);
-    const diffInWeeks = Math.floor(diffInDays / 7);
-    const diffInMonths = Math.floor(diffInDays / 30);
-
-    const status = future ? "Open" : "Closed";
-
-    let message;
-    if (diffInDays < 1) message = future ? `Ends in ${diffInHours} hours` : `Ended ${diffInHours} hours ago`;
-    else if (diffInDays < 7) message = future ? `Ends in ${diffInDays} days` : `Ended ${diffInDays} days ago`;
-    else if (diffInMonths < 1) message = future ? `Ends in ${diffInWeeks} weeks` : `Ended ${diffInWeeks} weeks ago`;
-    else message = future ? `Ends in ${diffInMonths} months` : `Ended ${diffInMonths} months ago`;
-
-    return { status, message };
-}
-
 function innerBlock(data) {
     document.title = data.title + ' | DAO Maker';
     var backgorund = document.getElementById('tBackgorund');
@@ -73,24 +50,7 @@ function innerBlock(data) {
         document.getElementById('cur_2').innerHTML = data.cur_1;
         document.getElementById('cur_price').innerHTML = data.cur_price;
         document.getElementById('total').innerHTML = data.total;
-        document.getElementById('statusOffering').innerHTML = `
-            <div class="flex flex-col border-l border-base-content/10 px-4 py-1 md:border-l-0 md:border-r md:pl-0">
-                <div class="flex h-8 items-center justify-start text-lg font-medium tracking-wide md:justify-end">${compareDate(data.status).status}</div>
-                <div class="flex h-8 items-center justify-start text-lg text-base-content/50 md:justify-end">
-                    <div class="flex tooltip tooltip-top" data-tip="${data.status}">
-                        <time>${compareDate(data.status).message}</time>
-                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 32 32" class="ml-1 h-3 w-3" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M 16 3 C 8.832031 3 3 8.832031 3 16 C 3 23.167969 8.832031 29 16 29 C 23.167969 29 29 23.167969 29 16 C 29 8.832031 23.167969 3 16 3 Z M 16 5 C 22.085938 5 27 9.914063 27 16 C 27 22.085938 22.085938 27 16 27 C 9.914063 27 5 22.085938 5 16 C 5 9.914063 9.914063 5 16 5 Z M 15 10 L 15 12 L 17 12 L 17 10 Z M 15 14 L 15 22 L 17 22 L 17 14 Z">
-                            </path>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-            <div class="flex flex-col border-l border-base-content/10 px-4 py-1 md:border-l-0 md:border-r md:pl-0">
-                <div class="flex h-8 items-center justify-start text-lg font-medium tracking-wide md:justify-end">Total allocation</div>
-                <div class="flex h-8 items-center justify-start text-lg text-base-content/50 md:justify-end">${data.allocation}</div>
-            </div>
-        `;
+        document.getElementById('statusOffering').innerHTML = `${data.allocation}`;
         document.getElementById('offering_on').classList.remove('hidden');
     } else {
         document.querySelector('[data-tab="2"]').innerHTML = `

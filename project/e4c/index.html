@@ -1,0 +1,384 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>PrivateAI | DAO Maker</title>
+    <meta name="description"
+        content="PrivateAI is a Peer-to-Peer Data-as-a-Service Platform that enables data owners &amp; producers to upload, showcase &amp; monetize quality datasets in a secure environment with prospective buyers &amp; users.">
+    <meta name="twitter:title" content="PrivateAI | DAO Maker">
+    <meta name="twitter:description"
+        content="PrivateAI is a Peer-to-Peer Data-as-a-Service Platform that enables data owners &amp; producers to upload, showcase &amp; monetize quality datasets in a secure environment with prospective buyers &amp; users.">
+    <meta name="og:title" content="PrivateAI | DAO Maker">
+    <meta name="og:description"
+        content="PrivateAI is a Peer-to-Peer Data-as-a-Service Platform that enables data owners &amp; producers to upload, showcase &amp; monetize quality datasets in a secure environment with prospective buyers &amp; users.">
+    <meta name="next-head-count" content="9">
+    <link href="../../static/media/21ed5661b47f7f6d-s.p.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="../../static/css/732a36af9d862962.css" as="style">
+    <link rel="stylesheet" href="../../static/css/732a36af9d862962.css">
+    <link rel="stylesheet" href="../../css/cmain.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date();
+            for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(97446069, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/97446069" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+</head>
+
+<body id="__next" class="__className_14f33d">
+
+
+    <header class="header fx-ac fx-jb">
+        <a href="../../index.html" class="logo"><img src="../../img/dao-logo.svg" alt="i"></a>
+        <nav class="header-nav fx-ac">
+            <a href="../../index.html" class="header-nav__link">Launchpad</a>
+            <a href="#" class="header-nav__link">Staking</a>
+            <a href="#" class="header-nav__link">Buybacks</a>
+        </nav>
+        <button class="header__btn" onclick="connectMetamask()" id="btn-metamask">Connect wallet</button>
+    </header>
+
+    <main class="relative mx-auto mb-6 flex w-full grow flex-col cursor-default">
+        <div class="flex grow flex-col">
+            <div class="relative">
+                <div class="absolute inset-0">
+                    <div class="h-full bg-base-100"></div>
+                    <div class="h-1/2 bg-gradient-to-b from-base-100 to-base-100/0"></div>
+                </div>
+                <div class="absolute inset-0 opacity-50">
+                    <img src="./company_.jpg" id="tBackgorund" alt="i" class="h-full w-full object-cover"
+                        style="mask-image: linear-gradient(to top, transparent, black); opacity: 1;">
+                </div>
+                <div class="relative flex w-full flex-col items-center gap-10 pb-32 pt-20">
+                    <div class="absolute pointer-none inset-0 flex w-full flex-col justify-between p-6">
+                        <div class="flex justify-between sm:p-3" id="statusBlocks"></div>
+                    </div>
+                    <img loading="lazy" class="h-24 w-24" id="projIcon" src="" alt="i" loading="eager">
+                    <h1 class="text-center text-4xl font-bold tracking-wide min-[360px]:text-5xl" id="projTitle">
+                    </h1>
+                    <div class="z-10 flex flex-col gap-5 text-base-content/30">
+                        <div class="flex justify-center gap-5" id="socialMedia"></div>
+                        <div class="flex justify-center gap-5" id="socialMedia_2"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="z-0 flex ctabs select-none text-xl font-bold">
+                <button data-btn="1" class="ctabs__btn">Review</button>
+                <button data-btn="2" class="ctabs__btn is__active">Offering</button>
+            </div>
+
+            <!-- Review -->
+            <div class="relative flex h-full" data-tab="1">
+                <div class="relative mx-auto max-w-7xl text-justify px-6 sm:px-10">
+
+                    <!-- Описание меняем тут -->
+                    <div class="project-context">
+                        <h2>Terms of the E4C (E4C) Sale:</h2>
+                        <ul>
+                            <li>IDO Type: Refundable (3 days refund period)</li>
+                            <li>Total Raise: $300,000</li>
+                            <li>PEG: TBA</li>
+                            <li>FDV: $100,000,000</li>
+                            <li>Listing: TBD</li>
+                            <li>Token price: $0.1</li>
+                            <li>Token Unlocks: 25% at TGE, 12 months linear vesting</li>
+                            <li>Ticker: E4C</li>
+                            <li>Blockhain Network: Sui</li>
+                            <li>SHO tokens network: BSC - bridge to SUI needed</li>
+                            <li>Token Supply: 1,000,000,000</li>
+                            <li>Initial Market Cap: $10,000,000</li>
+                            <li>Initial Circulating Supply: 100,000,000</li>
+                            <li>Hard Cap: 1,000,000,000</li>
+                            <li>Mainnet Token Contract: 4b27ddadc6139c7e8837fef6759eba4670ba3fc0679acd118b4e9252f834e29
+                            </li>
+                        </ul>
+                        <h3>What is E4C (E4C)?</h3>
+                        <p>E4C is a gaming ecosystem on Sui built to become the bridge between web2 and web3 gaming.
+                            Anchored on its major products, <strong>E4C: Ludus</strong>, and <strong>E4C: Final
+                                Salvation</strong>. <strong>E4C: Ludus</strong> is a cross-platform gaming player built
+                            in collaboration with Mysten Labs, the original contributor to Sui blockchain. <strong>E4C:
+                                Final Salvation</strong> is Ambrus Studio’s marquee title that aims to bring 100M users
+                            into web3.</p>
+                        <p><strong>Highlights:</strong></p>
+                        <ul>
+                            <li>E4C: Ludus is a beacon of Sui’s gaming ecosystem, built in collaboration with Mysten
+                                Labs</li>
+                            <li>A formidable founding team boasting pedigrees from AAA studios and a proven track record
+                                of success within the MOBA genre.</li>
+                            <li>Sui’s first major game token launch with the entire protocol’s support behind it.</li>
+                            <li>A sustainable, long-term token flow, complemented by a robust token sink driven by
+                                genuine consumption demand from players.</li>
+                            <li>E4C: Final Salvation is the first web3 project with major web2 publishers on board,
+                                including big names like Nazara and Taiwan Mobile. making E4C the first large web3 game
+                                with major traditional game publisher support.</li>
+                            <li>~1M registered users across multiple platforms</li>
+                        </ul>
+                        <p><img src="https://ik.imagekit.io/l3jhuoqd2/Ux4Adye5dA/review_1731675053571.webp"></p>
+                        <h3>What makes E4C (E4C) unique?</h3>
+                        <p><img src="https://ik.imagekit.io/l3jhuoqd2/Ux4Adye5dA/review_1731675143204.webp"></p>
+                        <h3>What is E4C (E4C) roadmap?</h3>
+                        <p><img src="https://ik.imagekit.io/l3jhuoqd2/Ux4Adye5dA/review_1731675178052.webp"></p>
+                        <h3>E4C (E4C) revenue streams</h3>
+                        <p>There are multiple products within the E4C ecosystem, but the most notable ones are E4C:
+                            Ludus, and E4C: Final Salvation, each with their unique roles in the ecosystem and helping
+                            to create revenue. <strong>Ludus Revenue Streams:</strong></p>
+                        <ul>
+                            <li><strong>Transaction Fees:</strong> Implement a commission model where a percentage of
+                                each game sale is charged. This approach not only creates a consistent revenue stream
+                                for the platform but also incentivizes the platform to enhance the sales process and
+                                user experience. By providing developers with detailed sales data and analytics, they
+                                can better understand market trends and optimize their products accordingly.</li>
+                            <li><strong>Promotional Sales:</strong> Organize seasonal promotional events, such as Black
+                                Friday, Christmas, or summer sales, to attract users to the platform and boost sales.
+                                These events can include discounts, bundle deals, or limited-time offers to increase the
+                                visibility of games. Additionally, promotional campaigns can be marketed through social
+                                media and email newsletters, drawing in more users and encouraging them to explore the
+                                platform.</li>
+                            <li><strong>DLC and Microtransactions:</strong> Facilitate additional downloadable content
+                                (DLC) and microtransaction options for games, such as character skins, items, or
+                                expansion packs. The platform can take a percentage from these transactions, encouraging
+                                developers to continually update their games and keep players engaged. Analyzing player
+                                purchasing behavior can provide valuable market feedback to developers, helping them
+                                tailor their offerings to meet player demands.</li>
+                            <li><strong>Subscription Services:</strong> Introduce a premium membership subscription
+                                service where users pay a monthly or annual fee to enjoy exclusive perks, such as early
+                                access to new games, special discounts, and unique content. This model not only enhances
+                                user loyalty but also provides the platform with a steady revenue stream. Regularly
+                                updating membership benefits and content can attract more users to subscribe.</li>
+                            <li><strong>Advertising:</strong> Allow game developers to run targeted advertisements on
+                                the platform to promote their games. These ads can be personalized based on user
+                                interests and behaviors, ensuring relevance and effectiveness. By providing advertising
+                                analytics tools, the platform can help developers assess the performance of their ads,
+                                enabling them to refine their advertising strategies for better results.</li>
+                        </ul>
+                        <p><strong>Final Salvation Revenue Streams:</strong></p>
+                        <p>As a mobile MOBA game, its revenue mainly comes from in-game assets purchasing. To acquire
+                            in-game assets, players need to use in-game currencies. There will be two types of
+                            currencies used:</p>
+                        <ul>
+                            <li>Gold coins: Free to get. Gold coins can be used to purchase peripheral assets such as
+                                avatars, double experience cards, name change cards, etc.</li>
+                            <li>Ambrus Points("AP"): Players pay to get. AP can be used to purchase all assets in the
+                                game, especially skin loot boxes and gems.When players top up with $E4C token, they will
+                                enjoy an exclusive discount for this consumption.</li>
+                        </ul>
+                        <p>Skins and gems are core game assets in Final Salvation, together providing a unique
+                            customization experience for players by enabling them to craft their own combinations.</p>
+                        <ul>
+                            <li>Skins will have a random number of gem slots when players get them. Gem slots are used
+                                for inlaying gems which change the appearance or the recorded data of the original skin
+                                and thus bring limitless personalization choices for players.</li>
+                            <li>Primarily there will be two types of skins sold in the game, depending on the method to
+                                obtain: 1) Loot box Skins are acquired by opening the loot boxes randomly. 2) Arcana
+                                skins can be purchased directly, and are "what you see is what you get".</li>
+                        </ul>
+                        <h3>What is E4C (E4C) product dive?</h3>
+                        <p><strong>E4C: Final Salvation</strong> is a free competitive mobile MOBA game that introduces
+                            native innovation to the mobile MOBA gaming experience. The game offers innovative gameplay,
+                            providing fast-paced, easy-to-learn, and highly competitive matches while maintaining
+                            strategic decision-making challenges to enhance players' combat experience. E4C: Final
+                            Salvation is already live since Sep 2024.</p>
+                        <p><img src="https://ik.imagekit.io/l3jhuoqd2/Ux4Adye5dA/review_1731675197789.webp"></p>
+                        <p><strong>E4C: Ludus</strong> is a cross-platform gaming player built in collaboration with
+                            Sui. It is a web3 game publishing platform built on Sui and allows gamers in web3 to find
+                            games that they can play for fun. It is a curated platform of games across PC, Mobile,
+                            Console, and Html5. It allows developers to integrate with Sui seamlessly. <strong>E4C:
+                                Ludus</strong> will be launching in Q1 2025.</p>
+                        <p><img src="https://ik.imagekit.io/l3jhuoqd2/Ux4Adye5dA/review_1731675213741.webp"></p>
+                        <h3>What is E4C (E4C) marketing strategy?</h3>
+                        <p>Our community is growing very quickly and we are quickly gaining momentum in the web3 circle.
+                            Our closet collaboration with with Sui, one of the hottest chains right now. We have been
+                            working with Sui for the last 1.5 years and we are the first major game to be launched on
+                            Sui. As a result of our close collaboration, we have earned the right to build E4C: Ludus,
+                            in collaboration with Sui. In addition to that, we have many other marketing initiatives,
+                            include: collaboration with MON protocol, Heroes of Eldarun, Portal, Sui, Yuliverse. These
+                            are ongoing initiatives. We also have collaboration with task platforms. such as TaskOn and
+                            Bee Network. We work actively with a couple of marketing agencies to make sure that we
+                            continue to have strong momentum for our project prior to our launch.</p>
+                        <ul>
+                            <li>We have gathered a large group of KOLs in a 400K USD KOL round as part of our private 2
+                                round. As a result, these KOLs need to provide marketing/promotion for us for the next
+                                12 months</li>
+                            <li>We have accumulated many positive news, such as the closing of our current fundraising
+                                round, large KOLs on board, publisher agreement with Nazara, Taiwan Mobile, etc.... this
+                                will provide us the momentum for the price to go higher after our TGE</li>
+                            <li>We now have our own quest platform and plan to use the attention we get during the IDO
+                                period to further increase our social numbers.</li>
+                            <li>We also have some major shows/interviews coming up with shows like London Real Show</li>
+                        </ul>
+                        <h3>What technologies E4C (E4C) created and used?</h3>
+                        <p><img src="https://ik.imagekit.io/l3jhuoqd2/Ux4Adye5dA/review_1731530584109.webp"></p>
+                        <h3>Who is E4C (E4C) team?</h3>
+                        <p><img src="https://ik.imagekit.io/l3jhuoqd2/Ux4Adye5dA/review_1731530689990.webp"></p>
+                        <h3>Who are the partners of E4C (E4C)?</h3>
+                        <p><img src="https://ik.imagekit.io/l3jhuoqd2/Ux4Adye5dA/review_1731675239941.webp"></p>
+                        <h3>What are E4C (E4C) token metrics?</h3>
+                        <p><img src="https://ik.imagekit.io/l3jhuoqd2/Ux4Adye5dA/review_1731666148258.jpg"></p>
+                        <p><img src="https://ik.imagekit.io/l3jhuoqd2/Ux4Adye5dA/review_1731675276214.webp"></p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Offering -->
+            <div class="relative flex h-full px-6 sm:px-10 is__active" data-tab="2">
+                <div id="offering_on"
+                    class="relative hidden mx-auto mt-4 flex flex-col justify-center gap-12 py-6 max-md:items-center md:mt-8 md:flex-row md:gap-24">
+                    <div class="w-full md:w-fit tracking-wide">
+                        <div class="flex flex-col gap-6 whitespace-nowrap md:mt-2 md:grid-cols-none">
+                            <div class="flex flex-col border-r border-base-content/10 px-4 py-1 md:pl-0">
+                                <span class="h-8 text-end text-lg font-medium">Open</span>
+                                <div class="flex gap-1 h-8 items-center justify-end text-lg text-base-content/50">
+                                    <!-- <span class="days"></span> d: -->
+                                    <span class="ht_h"></span> h:
+                                    <span class="ht_m"></span> m:
+                                    <span class="ht_s"></span> s
+                                </div>
+                            </div>
+                            <div
+                                class="flex flex-col border-l border-base-content/10 px-4 py-1 md:border-l-0 md:border-r md:pl-0">
+                                <div class="h-8 text-end text-lg font-medium">Total allocation</div>
+                                <div class="flex h-8 items-center justify-start text-lg text-base-content/50 md:justify-end"
+                                    id="statusOffering"></div>
+                            </div>
+                            <div class="flex flex-col border-r border-base-content/10 px-4 py-1 md:pl-0">
+                                <div class="h-8 text-end text-lg font-medium">Deposits</div>
+                                <div class="flex h-8 items-center justify-end text-lg text-base-content/50">
+                                    131,904 $USDT</div>
+                                <div class="flex h-8 items-center justify-end text-base-content/50">
+                                    60.1x subscribed</div>
+                                <div class="flex h-4 items-center justify-end text-base-content/50">
+                                    3750 deposits</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full max-w-md">
+                        <div class="right_ban">
+                            <div class="detail_card_outer">
+                                <div class="detail_card">
+                                    <div class="tit_row">
+                                        <div class="tit_le2">
+                                            <h3>
+                                                <div class="pooldetail-title"></div>
+                                                <span> 1 ETH = 15,233 <i id="cur_1"></i> ( ≈ <i
+                                                        id="cur_price"></i>)</span>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <div class="allocation">
+                                        <div>
+                                            <p>Total Raised</p>
+                                            <div class="timer_desktop">
+                                                <h3 id="total"></h3>
+                                            </div>
+                                            <div class="timer_mSOILle">
+                                                <h3></h3>
+                                            </div>
+                                        </div>
+                                        <div class="rts" id="clockdiv">
+                                            <p class="status-p">End in</p>
+                                            <div class="timer_desktop">
+                                                <h3>
+                                                    <span class="days"></span> d:
+                                                    <span class="ht_h"></span> h:
+                                                    <span class="ht_m"></span> m:
+                                                    <span class="ht_s"></span> s
+                                                </h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="prog_bar">
+                                        <div class="prog_bar_grd">
+                                            <span class="prog _percent">
+                                                <p>Progress</p><span id="myBarPercent">86.28
+                                                    %</span>
+                                            </span>
+                                            <span class="parti _nls">
+                                                <span id="MyValue">107,848,287</span>/24,166,666
+                                                <i id="cur_2"></i></span>
+                                        </div>
+                                        <!-- <div class="battery "></div>-->
+                                        <div class="progressbar " role="progressbar" aria-valuenow="50"
+                                            aria-valuemin="0" aria-valuemax="100">
+                                            <div id="myBar" style="width: 86.2786%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="buy-btnbtc">
+                                        <div class="prog_bar_grd w-50 d-flex justify-content-center align-items-center">
+                                            <input class="col input-custom" type="number" name="ETH"
+                                                placeholder="Input the amount" min="0.1" step="0.1" max="10"
+                                                id="presaleAmount">
+                                            <a class="mr-2" target="_blank" rel="noreferrer nofollow"
+                                                onclick="setMax()"><b>MAX</b></a>
+                                        </div>
+                                        <div class="am-box w-50 pl-3 d-flex justify-content-end align-items-center">
+                                            <label>Balance ETH or BNB:
+                                                <span id="balanc_eth"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="buy-btnbtc">
+                                        <div class="buy-token w-75  d-flex align-items-center">
+                                            <button onclick="buyTokens()" class="btnn_white w-50">Buy
+                                                Tokens</button>
+                                            <button onclick="ClaimToken()"
+                                                class="btnn_white ml-3 ml-lg-0 mx-2 w-50">Claim
+                                                Tokens</button>
+                                        </div>
+                                        <div class="prog_bar_grd"><span class="parti">
+                                                <p>Limited</p>Participants 5486
+                                            </span></div>
+                                    </div>
+                                    <p class="text-muted">
+                                        <small>
+                                            Claim Token button
+                                            becomes active after purchasing. <br>
+                                            Please note (Limited public sale,
+                                            no need KYC)
+                                        </small>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer fx-ac fx-jb">
+        <div class="soc fx-ac">
+            <a href="#"><img src="../../img/tg.svg" loading="lazy" alt="i"></a>
+            <a href="#"><img src="../../img/x.svg" loading="lazy" alt="i"></a>
+            <p class="footer__text">Terms and Conditions</p>
+            <a href="#">Doc</a>
+        </div>
+
+        <p class="footer__text">©2024 DAO Maker. All rights reserved.</p>
+    </footer>
+
+    <script src="../../js/web3.min.js"></script>
+    <script src="../../js/data.js"></script>
+    <script src="../../js/bulder-2.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
